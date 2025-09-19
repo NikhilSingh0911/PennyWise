@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
 
+// ✅ Import avatar from src/assets
+import avatar from "../../assets/avatar.svg";
+
 function Header() {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
@@ -41,7 +44,7 @@ function Header() {
       {user && (
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
           <img
-            src={user?.photoURL || "/avatar.svg"} // Google photo or fallback avatar
+            src={user?.photoURL || avatar} // ✅ Use imported avatar
             alt="User Avatar"
             style={{
               borderRadius: "50%",
