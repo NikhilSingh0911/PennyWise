@@ -41,7 +41,7 @@ function Header() {
       {user && (
         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
           <img
-            src={user?.photoURL || "/user.svg"} 
+            src={user?.photoURL || "/avatar.svg"} // Google photo or fallback avatar
             alt="User Avatar"
             style={{
               borderRadius: "50%",
